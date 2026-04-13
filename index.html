@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emannuel MKT — Digital Creator</title>
+  <title>Emannuel Mardyan — Digital Creator</title>
   <meta name="description" content="Emannuel Mardyan — Criação de Sites, Sistemas, Design Gráfico, Videomaker & Social Media." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -341,7 +341,9 @@
       justify-content: center; align-items: center;
     }
     .about-frame {
-      width: 300px; height: 340px; position: relative;
+      width: 300px;        /* Proporção 300x340 = 15:17 */
+      height: 340px;
+      position: relative;
     }
     .about-frame-border {
       position: absolute; inset: 0;
@@ -361,13 +363,14 @@
       background: var(--g2);
       clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
     }
-    .about-avatar-icon {
-      font-size: 5rem; line-height: 1;
-      filter: drop-shadow(0 0 12px var(--neon));
-    }
-    .about-avatar-label {
-      font-family: var(--font-mono); font-size: .65rem;
-      color: rgba(0,255,65,.5); letter-spacing: .2em;
+    /* Imagem da foto */
+    .about-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;    /* 'cover' preenche toda a área, cortando o excesso se necessário.
+                               Para ver a imagem inteira sem cortes, mude para 'contain' */
+      display: block;
+      clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
     }
     .about-badge {
       position: absolute; bottom: -20px; right: -20px;
@@ -383,7 +386,6 @@
       font-size: 1.6rem; font-weight: 900; line-height: 1;
     }
 
-    .about-content {}
     .about-content .sec-header { text-align: left; margin-bottom: 32px; }
     .about-content .sec-line { margin: 20px 0 0; }
 
@@ -474,7 +476,6 @@
       display: grid; grid-template-columns: repeat(4,1fr);
       gap: 40px; text-align: center;
     }
-    .stat-item {}
     .stat-num {
       font-family: var(--font-head); font-size: clamp(2.5rem,5vw,4rem);
       font-weight: 900; color: var(--neon); text-shadow: var(--glow-text);
@@ -840,8 +841,8 @@
       <div class="about-frame-corner bl"></div>
       <div class="about-frame-corner br"></div>
       <div class="about-avatar-placeholder">
-        <div class="about-avatar-icon">⚡</div>
-        <div class="about-avatar-label">Emannuel Mardyan</div>
+        <!-- Substitua pelo caminho correto da sua foto -->
+        <img src="assets/foto.png" alt="Emannuel Mardyan" class="about-avatar-img" />
       </div>
       <div class="about-badge">
         <span class="num">18</span>
@@ -970,7 +971,7 @@
       <div class="service-tags">
         <span class="service-tag">Premiere</span>
         <span class="service-tag">After Effects</span>
-        <span class="service-tag">DaVinci</span>
+        <span class="service-tag">CapCut</span>
       </div>
     </div>
   </div>
@@ -990,9 +991,9 @@
       <div class="skill-bar-item">
         <div class="skill-bar-header">
           <span class="skill-bar-name">HTML / CSS / JS</span>
-          <span class="skill-bar-pct">92%</span>
+          <span class="skill-bar-pct">95%</span>
         </div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
       </div>
       <div class="skill-bar-item">
         <div class="skill-bar-header">
@@ -1011,18 +1012,18 @@
       <div class="skill-bar-item">
         <div class="skill-bar-header">
           <span class="skill-bar-name">UI/UX Design</span>
-          <span class="skill-bar-pct">80%</span>
+          <span class="skill-bar-pct">95%</span>
         </div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
       </div>
 
       <p class="skill-group-title" style="margin-top:48px">Criativo / Audiovisual</p>
       <div class="skill-bar-item">
         <div class="skill-bar-header">
           <span class="skill-bar-name">Design Gráfico</span>
-          <span class="skill-bar-pct">88%</span>
+          <span class="skill-bar-pct">97%</span>
         </div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="97"></div></div>
       </div>
       <div class="skill-bar-item">
         <div class="skill-bar-header">
@@ -1034,9 +1035,9 @@
       <div class="skill-bar-item">
         <div class="skill-bar-header">
           <span class="skill-bar-name">Social Media Marketing</span>
-          <span class="skill-bar-pct">82%</span>
+          <span class="skill-bar-pct">98%</span>
         </div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="98"></div></div>
       </div>
     </div>
 
@@ -1055,7 +1056,6 @@
         <span class="tech-chip">Illustrator</span>
         <span class="tech-chip">Premiere Pro</span>
         <span class="tech-chip">After Effects</span>
-        <span class="tech-chip">DaVinci Resolve</span>
         <span class="tech-chip">CapCut</span>
         <span class="tech-chip">Git / GitHub</span>
         <span class="tech-chip">Meta Business</span>
@@ -1135,66 +1135,39 @@
         Tem um projeto em mente? Quer escalar sua presença digital? Me chama — vamos transformar sua ideia em realidade.
       </p>
       <div class="contact-links reveal" style="transition-delay:.2s">
-        <a href="https://wa.me/5588999999999" target="_blank" class="contact-link">
+        <a href="https://wa.me/5588993345111" target="_blank" class="contact-link">
           <span class="contact-link-icon">💬</span>
           <div>
             <span class="contact-link-label">WhatsApp</span>
-            <span>(88) 9 9999-9999</span>
+            <span>(88) 99334-5111</span>
           </div>
         </a>
-        <a href="mailto:emannuel@mkt.com" class="contact-link">
+        <a href="mailto:sousaemannuel7@gmail.com" class="contact-link">
           <span class="contact-link-icon">✉️</span>
           <div>
             <span class="contact-link-label">E-mail</span>
-            <span>emannuel@mkt.com</span>
+            <span>sousaemannuel7@gmail.com</span>
           </div>
         </a>
-        <a href="https://instagram.com/emannuelmkt" target="_blank" class="contact-link">
+        <a href="https://instagram.com/emannuel.mkt" target="_blank" class="contact-link">
           <span class="contact-link-icon">📸</span>
           <div>
             <span class="contact-link-label">Instagram</span>
-            <span>@emannuelmkt</span>
+            <span>@emannuel.mkt</span>
           </div>
         </a>
       </div>
     </div>
 
     <div class="reveal" style="transition-delay:.3s">
-      <form class="contact-form" onsubmit="handleForm(event)">
-        <div class="form-group">
-          <label class="form-label" for="name">Seu Nome</label>
-          <input class="form-input" type="text" id="name" placeholder="Como posso te chamar?" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="email">E-mail</label>
-          <input class="form-input" type="email" id="email" placeholder="seu@email.com" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="service">Serviço de Interesse</label>
-          <select class="form-input" id="service" style="cursor:none">
-            <option value="">Selecione um serviço...</option>
-            <option>Criação de Sites</option>
-            <option>Sistema de Gestão</option>
-            <option>Social Media</option>
-            <option>Design Gráfico</option>
-            <option>Captação de Vídeo</option>
-            <option>Edição de Vídeo</option>
-            <option>Pacote Completo</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="msg">Mensagem</label>
-          <textarea class="form-textarea" id="msg" placeholder="Conte sobre seu projeto..."></textarea>
-        </div>
-        <button type="submit" class="form-btn">Enviar Mensagem ▸</button>
-      </form>
+      <!-- Formulário pode ser adicionado aqui se desejar -->
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-copy">© 2025 <strong>Emannuel Mardyan</strong> — Todos os direitos reservados.</p>
+  <p class="footer-copy">© 2026 <strong>Emannuel Mardyan</strong> — Todos os direitos reservados.</p>
   <div class="footer-socials">
     <a href="#" class="footer-social">Instagram</a>
     <a href="#" class="footer-social">WhatsApp</a>
@@ -1252,7 +1225,6 @@
     'Videomaker & Editor Criativo.',
     'Gestor de Redes Sociais.',
     'Criador de Sistemas de Gestão.',
-    'Técnico em Energia Renovável.',
   ];
   let pi=0, ci=0, deleting=false;
   const typedEl = document.getElementById('typed');
@@ -1320,15 +1292,6 @@
     });
   },{ threshold:.2 });
   document.querySelectorAll('#skills .reveal').forEach(el=>barObs.observe(el));
-
-  /* ── FORM ── */
-  function handleForm(e){
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-btn');
-    btn.textContent = '✓ Mensagem Enviada!';
-    btn.style.background = '#00cc33';
-    setTimeout(()=>{ btn.textContent = 'Enviar Mensagem ▸'; btn.style.background=''; }, 3000);
-  }
 
   /* ── PARALLAX HERO NUMBER ── */
   window.addEventListener('scroll', ()=>{
